@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Me dê a bundinha?</title>
+    <style>
+        body{
+            background-color: rgb(0, 0, 0);
+            text-align: center;
+            padding-top: 50px;
+        }
+        button{
+            background-color: rgb(222, 0, 0);
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            font-weight: bold;
+            padding: 20px;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            margin: 20px;
+        }
+        button:hover{
+            background-color: rgb(0, 255, 55);
+            color: rgb(3, 142, 1);
+        }
+        h1{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="color: rgb(255, 255, 255);">Me dê a sua bundinha?</h1>
+    <button id="sim">Sim</button>
+    <button id="nao">Não</button>
+
+    <script>
+        var nao = document.getElementById("nao");
+        nao.addEventListener("click", function(){
+            var randomX = Math.floor(Math.random()*window.innerWidth);
+            var randomY = Math.floor(Math.random()*window.innerHeight);
+                nao.style.position = "absolute";
+                nao.style.top = randomY + "px";
+                nao.style.left = randomX + "px";
+
+
+        });
+
+        var sim = document.getElementById("sim");
+        sim.addEventListener("click", function(){
+            window.location.href = "https://www.youtube.com/watch?v=XleVEVy70hw";
+        });
+    </script>
+    <footer style="color: aliceblue;"><p>@cybellens</p></footer>
+</body>
+</html>
